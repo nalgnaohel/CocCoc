@@ -15,6 +15,15 @@ func TestGetGrossPrice(t *testing.T) {
 		expectedGrossPrice float64
 	}{
 		{
+			name: "Test Case 0",
+			items: []models.Item{
+				{},
+			},
+			weightCoeff:        1.0,
+			dimensionCoeff:     1.0,
+			expectedGrossPrice: 0.0,
+		},
+		{
 			name: "Test Case 1",
 			items: []models.Item{
 				{
