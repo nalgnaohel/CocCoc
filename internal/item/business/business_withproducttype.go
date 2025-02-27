@@ -15,6 +15,12 @@ func NewItemBizWithProductType() item.ItemBusiness {
 
 // GetPrice method
 func (ib *ItemBizWithProductType) GetPrice(weightCoeff float64, dimensionCoeff float64, item *models.Item) float64 {
+	if weightCoeff < 0 || dimensionCoeff < 0 {
+		return -1
+	}
+	if item.AmazonPrice < 0 || item.Weight < 0 || item.ItemDimension.Width < 0 || item.ItemDimension.Height < 0 || item.ItemDimension.Depth < 0 {
+		return -1
+	}
 	return item.AmazonPrice + ib.GetShippingFee(weightCoeff, dimensionCoeff, item)
 }
 

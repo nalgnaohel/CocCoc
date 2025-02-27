@@ -5,9 +5,9 @@ type Order struct {
 	Items []Item `json:"items"`
 }
 
-func NewOrder(id int, Items []Item) *Order {
+func NewOrder(id int, items []Item) *Order {
 	return &Order{
 		ID:    id,
-		Items: Items,
+		Items: items,
 	}
 }

@@ -10,9 +10,9 @@ type OrderBiz struct {
 	itemBiz item.ItemBusiness
 }
 
-func NewOrderBiz(itemBiz item.ItemBusiness) order.OrderBusiness {
+func NewOrderBiz(ib item.ItemBusiness) order.OrderBusiness {
 	return &OrderBiz{
-		itemBiz: itemBiz,
+		itemBiz: ib,
 	}
 }
 
