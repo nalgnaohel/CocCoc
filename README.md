@@ -10,3 +10,8 @@ cd INT3306054---QAirline
 ```
 ./coccoc
 ```
+Or via Docker:
+```
+docker build -t coccoc-app .
+docker run -it --rm coccoc-app
+```
